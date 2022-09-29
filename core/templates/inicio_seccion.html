@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenido %}
+
+<main class="form-signin" style="padding-left: 30%; padding-right: 30%;">
+    <form action="" method="post">
+      {% csrf_token %}
+      <img style="margin: 40%; margin-bottom: 30%; margin-top: 10%;" class="mb-4" src="" alt="" width="120" height="90">
+      <h1 aria-label="" style="text-align: center;" class="h3 mb-3 fw-normal">Inicia Sesion para continuar</h1>
+  
+      <div class="form-floating">
+        <input type="text" name="txtUsuario"  class="form-control" id="txtUsuario" >
+        <label>Nombre Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" name="txtPass" class="form-control" id="txtPass" >
+        <label>Password</label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-success"
+            style="float: none; padding-left: 49%; padding-right: 45%; ">iniciar</button>
+      <p class="mt-5 mb-3 text-muted">Â© 2017â€“2022</p>
+    </form>
+  </main>
+
+
+{% endblock contenido %}
