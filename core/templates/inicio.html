@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenido %}
+
+<!-- Login -->
+<article id="contact" class="wrapper style4">
+    <div class="container medium">
+        <header>
+            <h2>Inicio sesión.</h2>
+            <p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <form method="post" action="{% url 'INICIO' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+                            <input type="text" name="nom_user" id="nom_user" placeholder="Nombre Usuario" required minlength="3" maxlength="10"/>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <input type="text" name="pass" id="pass" placeholder="Contraseña" required minlength="8" maxlength="12" />
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="reset" value="Limpiar" class="alt" /></li>
+                                <li><input type="submit" value="Ingresar" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</article>
+<div style="text-align: center; font-size: xx-large; color: red;">{{mensaje}}</div>
+
+
+
+{% endblock contenido %}
